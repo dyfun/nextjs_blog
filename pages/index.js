@@ -15,7 +15,7 @@ export default function Home({ posts }) {
           </div>
           {posts
             ? posts.map((post) => {
-                return <PostCard post={post} />;
+                return <PostCard key={post.node.title} post={post}/>;
               })
             : "Yükleniyor..."}
         </div>

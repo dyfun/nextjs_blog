@@ -13,7 +13,10 @@ const CatDetails = ({ posts, category }) => {
         {posts
           ? posts.map((post) => {
               return (
-                <div className="mt-12 p-12 transition hover:shadow-xl hover:transition dark:bg-gray-700 overflow-hidden rounded">
+                <div
+                  className="mt-12 p-12 transition hover:shadow-xl hover:transition dark:bg-gray-700 overflow-hidden rounded"
+                  key={post.node.title}
+                >
                   <h3 className="font-bold uppercase text-2xl text-center dark:text-white">
                     {post.node.title}
                   </h3>
